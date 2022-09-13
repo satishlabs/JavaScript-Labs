@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JS: Events-Listeners</title>
+        <style>
+            p{
+                font-size: 25px;
+                font-family: Cambria;
+                border-radius: 15px;
+                border: 2px solid red;
+                margin: 50px;
+                padding: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Welcome to SatishLabs!!</h2>
+        <p onclick="show1();">JS Training</p>
+        <p onclick="show2();">React Training</p>
+        <p onmouseover="show3();" onmouseout="show4();">Angular Training</p>
+    </body>
+    <script>
+        window.alert("Hello Guys, How are you?");
+        function show1() {
+            alert("Double click on JS Training");
+            window.console.log("Click on JS Training");
+        }
+
+        function show2(){
+            alert("Double click on React Training");
+            window.console.log("Click on React Training");
+        }
+
+        function show3() {
+            console.log("MouseOver on Angular Training");
+        }
+
+        function show4() {
+            console.log("MouseOut on Angular Training");
+        }
+    </script>
+</html>
