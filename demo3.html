@@ -1,0 +1,27 @@
+<html><head>
+    <title>JS - Updating DOM</title>
+    <style>
+        h1,div,input{
+            margin: 50px;
+        }
+    </style>
+    </head>
+    <body>
+      <h1 id="myhello">Hello Guys</h1>
+      <h1 id="myhai">Hai Guys</h1>
+      <input type="button" value="Change Text" onclick="changeText()"/>
+      <script>
+        function changeText(){
+            var hello = document.getElementById("myhello");
+            console.log(hello.innerHTML);
+            hello.innerHTML = "Welcome to SatishLabs";
+            console.log(hello.innerHTML);
+
+            var hai = document.getElementById("myhai");
+            console.log(hai.innerHTML);
+            hai.innerHTML = hai.innerHTML+" OK!!";
+            console.log(hai.innerHTML);
+        }
+      </script>
+    </body>
+</html>
