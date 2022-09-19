@@ -1,0 +1,36 @@
+<html>
+    <header>
+        <title>JS Template</title>
+        <style>
+            div{ 
+            margin: 50px; 
+            border: 2px solid red; 
+            border-radius: 15px; 
+            width: 500px; 
+            font-size: 25px; 
+            background-color: goldenrod; 
+            padding-left: 50px; 
+        }
+        </style>
+    </header>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+           print("<u>Topic Heading Here :") 
+
+                
+
+                var x =10;
+                myprint(x);
+                var y=20;
+                myprint(y);
+                var  sum = x+y;
+                myprint("Sum : "+sum);
+        </script>
+    </body>
+</html>
