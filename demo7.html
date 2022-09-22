@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Data Types and Variables</title>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Variables<br/></u>");
+            var x=10;
+            myprint(x);
+
+            let y = 20;
+            myprint(y);
+
+            //let y ="Hai Guys"; //Error
+            y = "Hai Guys";
+            myprint(y);
+        </script>
+       
+    </body>
+</html>
