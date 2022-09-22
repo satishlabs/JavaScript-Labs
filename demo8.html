@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Variable Scope</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        div{
+           border: 2px solid red;
+           margin: 50px;
+           border-radius: 15px;
+           width: 500px;
+           font-size: 25px;
+           background-color: goldenrod;
+           padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+        }
+
+        myprint("<u>Variable Scope<br/></u>");
+        var x=10;//Global scope
+
+        myprint(x);
+        function show(){ //Function Definition
+            var y=20; //Function scope
+            myprint(y);
+
+            if(true){
+                var z=30; //Not in BlockScope , In Function Scope
+                myprint(z);
+
+                myprint("Inside If -x "+x);
+                myprint("Inside If -y "+y);
+                myprint("Inside If -z "+z+"<br/>");
+            }
+    
+            myprint("After If -x "+x);
+            myprint("After If -y "+y);
+            myprint("After If -z "+z+"<br/>");
+        }
+
+        show();//Funcation call
+        myprint("Outside show() - x "+x); //Global scope
+       // myprint("Outside show() - y "+y); //Function scope
+       // myprint("Outside show() - z "+z); //In Function Scope
+
+    </script>
+   
+</body>
+</html>
