@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JS : Var Default Vals and Constants</title>
+        <style>
+            div{
+                border: 2px solid red;
+                margin: 50px;
+                border-radius: 15px;
+                width: 500px;
+                font-size: 25px;
+                background-color: goldenrod;
+                padding-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+            myprint("<u>Var Default Vals and Constants</u>");
+            var x;
+            myprint(x); //Undefined
+
+            myprint(typeof(x)); //Undefined
+
+           // myprint(y);
+           // myprint(typeof(y));
+
+           var a =10;
+           myprint(a);
+           a=20;
+           myprint(a);
+
+           let b=100;
+           myprint(b);
+           b=200;
+           myprint(b);
+
+           const c=99;
+           myprint(c);
+          // c=55; //Assginment to constants variable 
+           //myprint(c);
+           myprint("Done!!");
+        </script>
+    </body>
+</html>
