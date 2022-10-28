@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS: break and continue</title>
+        <style>
+            div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u> break and continue </u>:")
+            for(var i=1; i<=5; i++){
+                myprint(i);
+                if(i >= 3)
+                    break;
+                  myprint("Inside loop");  
+            }
+            myprint("--------------------------");
+            for(var i=1; i<=5; i++){
+                myprint(i);
+                if(i >= 3)
+                    continue;
+                  myprint("Inside loop");  
+            }
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
