@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>JS: Swicth Statement</title>
+        <style>
+            div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u> Swicth Statement </u>:")
+            //var day=5;
+            var day = new Date().getDay();
+            switch(day){
+                case 0:
+                    myprint("Sunday");
+                    break;
+                case 1:
+                    myprint("Monday");
+                    break;
+                case 2:
+                    myprint("Tuesday");
+                    break;
+                case 3:   
+                    myprint("Wednesday");
+                    break;
+                case 4:
+                    myprint("Thursday");
+                    break;
+                case 5:
+                    myprint("Friday");
+                    break;
+                case 6:
+                    myprint("Satuarday");
+                    break;
+                default:
+                    myprint("Invalid");                       
+            }
+
+
+
+            var x = "0";
+            switch(x){
+                case "0":
+                    myprint("Zero");
+                    break;
+                case "1":
+                    myprint("One");
+                    break;
+                default:
+                    myprint("Invalid");        
+            }
+
+            var x = "1";
+            switch(x){
+                case "0":
+                    myprint("Zero");
+                    break;
+                case "1":
+                    myprint("One");
+                    break;
+                default:
+                    myprint("Invalid");        
+            }
+            myprint("Done");
+        </script>
+    </body>
+</html>
