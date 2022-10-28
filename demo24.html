@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>JS: while and do-while loop</title>
+        <style>
+            div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u> while and do-while loop </u>:")
+            var i=1;
+            while(i <= 5){
+                myprint(i);
+                i++;
+            }
+            myprint("------------------------");
+
+            var i=1;
+            do{
+                myprint(i);
+                i++;
+            }while(i<=5);
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
