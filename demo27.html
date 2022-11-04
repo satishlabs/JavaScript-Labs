@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JS: Arryas -2</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u> Arrays -2 </u>:")
+            var arr = new Array("Hello Guys"); //Element
+            myprint(arr.length);
+            myprint(arr);
+            myprint("---------------------------------");
+
+            var arr = new Array(5); //Size
+            myprint("Before Assinging - Size : "+arr.length);
+            myprint(arr);
+            myprint("---------------------------------");
+
+            arr[0]=10;
+            arr[1]=99.9;
+            arr[4]="Hello Guys";
+            arr[5]=true;
+            arr[99]="OK";
+            myprint("After Assgining - Size : "+arr.length);
+            for(i in arr){ //returns the index if element is found
+                myprint(i+" : "+arr[i]);
+            }
+            myprint("---------------------------------");
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
