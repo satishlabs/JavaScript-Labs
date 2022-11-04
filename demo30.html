@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>JS: Function -1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>  Exploring Functions -1 </u>:")
+            function show(){
+                var x=10;
+                myprint(x);
+                myprint("Hello Guys");
+                console.log("I am show()");
+                //return undefined
+            }
+            show()
+
+            var res = show();
+            myprint(res);
+
+            myprint("---------------------------------");
+            function sum(a,b){
+                myprint("a type: "+typeof a);
+                myprint("b type: "+typeof b);
+                var s = a+b;
+                return s;
+            }
+
+            var res1 = sum(10,20);
+            myprint(res1);
+
+            var res2 = sum("10","20");
+            myprint(res2);
+            myprint("Done");
+        </script>
+    </body>
+</html>
