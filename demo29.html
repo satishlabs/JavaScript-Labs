@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>JS: : Creating HTML elements with JS</title>
+        <style>
+            div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+            ul{
+                list-style: circle;
+            }
+            #mytable{
+                margin: 50px;
+                border: 2px solid red;
+                border-radius: 10px;
+                width: 30%;
+                padding: 20px;
+                line-height: 1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my-data-div"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("my-data-div");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u> : Creating HTML elements with JS </u>:")
+            var arr = ["Java","Angular","Python"];
+
+            var str = "<ul>";
+                for(i in arr){
+                    str = str+"<li>"+arr[i]+"</li>"; //<li>Java</li>
+                }
+                str = str+"</ul>"
+                myprint(str);
+            myprint("---------------------------------");
+
+                var str="<table id='mytable'>";
+                 for(i in arr){
+                    str = str+"<tr><td>"+arr[i]+"</td></tr>";
+                 }   
+                 str = str+"</table>"
+                 myprint(str);
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
