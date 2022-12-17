@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JS: Function -3</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Functions -3</u>");
+
+            var show = function(){
+                myprint("I am show()");
+                myprint("I am show()");
+            };
+
+            show();
+            myprint(typeof show);
+            myprint("-------------------------");
+
+            var add =function(a,b){
+                var s = a+b;
+                return s;
+            };
+
+            var res = add(10,20);
+            myprint(res);
+            myprint(typeof add);
+
+            myprint("-------------------------");
+            myprint("Done");
+        </script>
+    </body>
+</html>
