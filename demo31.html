@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>JS: Function -2</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Functions -2</u>");
+
+           var arr = [10,20,30,40,50]; //900
+
+           function showArray(arr1){ // 
+            myprint("in func : before: "+arr1); //A 
+                arr1[2]=99; 
+                myprint("in func : After: "+arr1); //A 
+            } 
+            showArray(arr);
+            myprint("out func: "+arr);
+            myprint("------------------------");
+
+            function sumArray(arr1){
+                var sum=0;
+                for(i in arr1){
+                    sum+=arr1[i];
+                }
+                return sum;
+            }
+
+            var result = sumArray(arr);
+            myprint(result);
+            myprint("-------------------------");
+            myprint("Done");
+        </script>
+    </body>
+</html>
