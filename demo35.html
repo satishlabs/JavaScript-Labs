@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS: Function -5</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Functions -5</u>");
+            var p =10; //Global
+            myprint("1 - "+p);//10
+            function show(){
+                var p=20; //Local to show
+                function inner(){
+                    var p=30; //Local to Inner
+                    myprint("3 - "+p); //30
+                }
+                myprint("2 - "+p); //20
+                inner();
+                myprint("4 - "+p); //20
+            }
+            show();
+            myprint("-------------------------");
+            myprint("Done");
+        </script>
+    </body>
+</html>
