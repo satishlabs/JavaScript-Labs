@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>JS: Function -6</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Functions -6</u>");
+            function show1(){
+                var x =20; //Local to show1
+                myprint(x) //2 ->20
+                {
+                    var x = 30; 
+                    myprint(x); //3 ->30
+                }
+                myprint(x); //4 ->30
+            }
+
+            var x = 10; //Global
+            myprint(x); //1 ->10
+            show1();
+            myprint(x);
+            myprint("-------------------------");
+            function show2(){
+                var x=30; //Local to show2
+            //    myprint(x){
+            //        let x =30; //Local to block
+            //        myprint(x);
+            //    }
+                myprint(x); //show2 local x
+            }
+            var x=10;
+            myprint(x);
+            show2();
+            myprint(x);
+            myprint("Done");
+        </script>
+    </body>
+</html>
