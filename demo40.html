@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>JS : Custom Objects - 1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Custom Objects - 1</u>");
+            var cust = {
+                cid: 101,
+                cname: "Satish",
+                email: "satish@gmail",
+                phone: 12345
+            }
+            console.log(cust);
+            myprint(typeof cust);
+            myprint("Way to access Object properties");
+            myprint(cust.cid);
+            myprint(cust.cname);
+            myprint(cust.email);
+            myprint(cust.phone);
+            myprint("Anther way to access Object properties");
+            myprint(cust["cid"]);
+            myprint(cust["cname"]);
+            myprint(cust["email"]);
+            myprint(cust["phone"]);
+
+            myprint("Updating Object properties");
+            cust.cname = "Satish Prasad";
+            cust.phone = 99999;
+
+            myprint("Object properties After update");
+            myprint(cust.cid);
+            myprint(cust.cname);
+            myprint(cust.email);
+            myprint(cust.phone);
+            console.log(cust);
+            myprint("Done");
+        </script>
+    </body>
+</html>
