@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>JS: Function -8</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>Functions -8</u>");
+           var p=10;
+           myprint("Outside show: "+p);
+           function show(){
+            var p = 20;
+            function display1(){
+                var p = 30;
+                myprint("Inside display1: "+p);
+                function display2(){
+                    var p = 40;
+                    myprint("Inside display2: "+p);
+                }
+                myprint("Inside display1 :"+p);
+                display2();
+            }
+            myprint("Inside show: "+p);
+            display1();
+            myprint("Inside show: "+p);
+           }
+           show();
+           myprint("Outside show: "+p);
+            myprint("-------------------------");
+          
+            myprint("Done");
+        </script>
+    </body>
+</html>
