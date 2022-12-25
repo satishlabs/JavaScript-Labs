@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>JS : Closures</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Closures</u>");
+           var counter = 0;
+           function increment1(){
+            counter++;
+           }
+           increment1();
+           myprint("Counter: "+counter);
+           increment1();
+           myprint("Counter: "+counter);
+           increment1();
+           myprint("Counter: "+counter);
+           myprint("-------------------------");
+           counter = counter+5; //Problem
+
+           increment1();
+           myprint("Counter: "+counter);
+           myprint("-------------------------");
+
+           function increment2(){
+            var counter = 0;
+            counter++;
+            return counter;
+           }
+           myprint("Counter1: "+increment2());
+           myprint("Counter2: "+increment2());
+           myprint("Counter3: "+increment2());
+           //Problem
+           myprint("-------------------------");
+
+           //use Java Script Clousre to fix
+           var increment = (
+            function(){
+                var counter = 0; //only once
+                console.log("Hello Guys"); //Only once
+                return function(){
+                    counter++;
+                    return counter;
+                }
+            }
+           )();
+
+           myprint("Counter1: "+increment());
+           myprint("Counter2: "+increment());
+           myprint("Counter3: "+increment());
+           myprint("Counter4: "+increment());
+           myprint("Counter5: "+increment());
+           myprint("Counter6: "+increment());
+            myprint("Done");
+
+            // A closure is a function having access to the parent scope, 
+ // even after the parent function has closed. 
+ //The self-invoking function only runs once. 
+ // It sets the counter to zero (0), and returns a function expression. 
+
+        </script>
+    </body>
+</html>
