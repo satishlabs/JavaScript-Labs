@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>JS : Custom Objects - 3</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Custom Objects - 3</u>");
+            var cust = {
+                cid: 101,
+                cname: "Satish",
+                phone: 12345,
+                
+                gitCid:function(){
+                    return this.cid;
+                },
+
+                getCname:function(){
+                    return this.cname;
+                },
+                getPhone:function(){
+                    return this.phone;
+                },
+                setCid:function(cid){
+                    this.cid=cid;
+                },
+                setName:function(cname){
+                    this.cname = cname;
+                },
+                setPhone:function(phone){
+                    this.phone = phone;
+                }
+
+            }
+
+            console.log(cust);
+            myprint(typeof cust);
+
+            myprint("Way to call Object functions");
+            myprint(cust.getCid);
+            myprint(cust.getCname());
+            myprint(cust.getPhone());
+
+            cust.setCid(1111);
+            cust.setName("Test");
+            cust.setPhone(5555);
+
+            myprint(cust.getCid);
+            myprint(cust.getCname());
+            myprint(cust.getPhone());
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
