@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>JS : Custom Objects - 2</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Custom Objects - 2</u>");
+            var cust = {
+                cid: 101,
+                cname: "Satish",
+                phone: 12345,
+                active: true,
+                email: ["satish@gmail","prasad@gmail"],
+                address:{
+                    city: "Bangalore",
+                    state: "KA"
+                },
+                isCustomerActive:function(){
+                    return this.active;
+                },
+                getCity:function(){
+                    return this.address.city;
+                },
+                getPhone:function(){
+                    return this.phone;
+                }
+
+            }
+            console.log(cust);
+            myprint(typeof cust);
+
+            myprint("Way to access Object properties");
+            myprint(cust.cid);
+            myprint(cust.cname);
+            myprint(cust.phone);
+            myprint(cust.active);
+            myprint(cust.email[0]);
+            myprint(cust.email[1]);
+            myprint(cust.address.city);
+            myprint(cust.address.state);
+
+            myprint("Way to call Object functions");
+
+            var x = cust.isCustomerActive();
+            myprint(x);
+
+            var city = cust.getCity;
+            myprint(city);
+
+            var ph = cust.getPhone();
+            myprint(ph);
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
