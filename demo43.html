@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>JS : Custom Objects - 4</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Custom Objects - 4</u>");
+            var cust = {
+                cid: 101,
+                cname: "Satish",
+                phone: 12345,
+                
+                get customerId(){
+                    return this.cid;
+                },
+
+                get customerName(){
+                    return this.cname;
+                },
+                
+                get customerPhone(){
+                    return this.phone;
+                },
+
+                set customerId(cid){
+                    this.cid = cid;
+                },
+
+                set customerName(name){
+                    this.cname = name;
+                },
+
+                set customerPhone(ph){
+                    this.phone = ph;
+                }
+                
+            }
+
+            console.log(cust);
+            myprint(typeof cust);
+
+            myprint("Way to call Object functions");
+            myprint(cust.customerId);
+            myprint(cust.customerName);
+            myprint(cust.customerPhone);
+
+            myprint("Way to access Object setters"); 
+            cust.customerName ="Test";
+            cust.customerPhone = 5555;
+
+            myprint(cust.customerId);
+            myprint(cust.customerName);
+            myprint(cust.customerPhone);
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
