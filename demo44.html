@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>JS : Custom Objects - 5</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Custom Objects - 5</u>");
+            function show(){}
+
+            function Customer(cid,cname,email,phone){
+                this.cid = cid;
+                this.cname = cname;
+                this.email = email;
+                this.phone = phone;
+            }
+
+            var cust1 = new Customer(55,"Satish","satish@gmail",11111);
+            var cust2 = new Customer(99,"Prasad","prasad@gmail",22222);
+            var cust3 = new Customer();
+
+            myprint(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone);
+            myprint(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone);
+            myprint(cust3.cid+" "+cust3.cname+" "+cust3.email+" "+cust3.phone);
+
+            myprint(typeof cust1);
+            myprint(typeof cust2);
+            myprint(typeof cust3);
+            myprint(typeof Customer);
+            myprint(typeof show);
+
+            cust1.accno = 101;
+            cust1.bal = 25000;
+            myprint(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone+" "+cust1.accno+" "+cust1.bal);
+            myprint(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone+" "+cust2.accno+" "+cust2.bal);
+
+            Customer.prototype.branchCode = "B-111";
+            Customer.prototype.city = "Bangalore";
+
+            myprint(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone+" "+cust1.accno+" "+cust1.bal+" "+cust1.branchCode+" "+cust1.city);
+            myprint(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone+" "+cust2.accno+" "+cust2.bal+" "+cust2.branchCode+" "+cust2.city);
+
+            
+            myprint("Done");
+        </script>
+    </body>
+</html>
