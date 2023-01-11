@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>JS : Exploring - Math Object</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Exploring - Math Object</u>");
+            myprint(Math.sqrt(25));
+            myprint(Math.cbrt(27));
+            myprint(Math.pow(5,2));
+            myprint(Math.ceil(1.234));
+            myprint(Math.ceil(1.567));
+            myprint(Math.floor(1.234));
+            myprint(Math.floor(1.567));
+            myprint(Math.round(5.234));
+            myprint(Math.round(5.567));
+            myprint(Math.sign(-99));
+            myprint(Math.sign(99));
+            myprint(Math.trunc(123.456));
+            myprint(Math.trunc(123.567));
+            myprint(Math.max(10, 20, 30, 40, 50));
+            myprint(Math.min(10, 20, 30, 40, 50));
+
+            myprint(Math.random()); //between 0 to 1
+            
+            var rnum = Math.trunc(Math.random()*10);
+            myprint(rnum);
+
+            var rnum = Math.trunc(Math.random() * 100); 
+            myprint(rnum); 
+
+            var rnum = Math.trunc(Math.random() * 1000); 
+            myprint(rnum); 
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
