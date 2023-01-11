@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>JS : Exploring - Number Object - 1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Exploring - Number Object - 1</u>");
+            var x = "10";
+            var y = "20";
+            var z = x+y;
+            myprint(z);
+
+            var a = parseInt(x);
+            var b = parseInt(y);
+            var c = a+b;
+            myprint(c);
+
+            var x = "10.5";
+            var y = "20.5";
+            var x = x+y;
+            myprint(x);
+
+            var a = parseFloat(x);
+            var b = parseFloat(y);
+            var c = a+b;
+            myprint(c);
+
+            var p = "SatishLabs";
+            var q = parseFloat(p);
+            var r = parseInt(p);
+            myprint(q);
+            myprint(r);
+            myprint("---------------------")
+
+
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
