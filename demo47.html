@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>JS : Exploring - Number Object - 2</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Exploring - Number Object - 2</u>");
+            var num1 = 12345.2789;
+            myprint(num1.toFixed()); //12345
+            myprint(num1.toFixed(1)); //12345.3
+            myprint(num1.toFixed(2)); //12345.28
+            myprint(num1.toFixed(5)); //12345.27890
+            myprint(num1.toFixed(6)); //12345.278900
+
+            myprint("---------------------");
+
+            var num2 = 2.34;
+            myprint(num2.toFixed()); //2
+            myprint(num2.toFixed(1)); //2.3
+            myprint(num2.toFixed(2)); //2.34
+
+            var num3 = 2.35;
+            myprint(num3.toFixed()); //2
+            myprint(num3.toFixed(1)); //2.4
+            myprint(num3.toFixed(2)); //2.35
+
+            var num4 = 2.55;
+            myprint(num4.toFixed());
+            myprint(num4.toFixed(1));
+            myprint(num4.toFixed(2));
+
+            myprint("---------------------");
+               
+            var num1 = 5.123456;
+            myprint(num1.toPrecision());
+            myprint(num1.toPrecision(5));
+            myprint(num1.toPrecision(4));
+            myprint(num1.toPrecision(3));
+            myprint(num1.toPrecision(2));
+            myprint(num1.toPrecision(1));
+
+            myprint("---------------------");
+
+            var num2 = 0.000123;
+
+            myprint(num2.toPrecision());
+            myprint(num2.toPrecision(5));
+            myprint(num2.toPrecision(4));
+            myprint(num2.toPrecision(3));
+            myprint(num2.toPrecision(2));
+            myprint(num2.toPrecision(1));
+
+            myprint("---------------------");
+
+            var num3 = 1234.5;
+            myprint(num3.toPrecision());
+            myprint(num3.toPrecision(5));
+            myprint(num3.toPrecision(4));
+            myprint(num3.toPrecision(3));
+            myprint(num3.toPrecision(2));
+            myprint(num3.toPrecision(1));
+
+            myprint("---------------------");
+
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
