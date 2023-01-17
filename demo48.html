@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>JS : Exploring - Date Object -1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            function myprint(data){
+                var mydiv = document.getElementById("mydiv");
+                console.log(mydiv);
+                mydiv.innerHTML = mydiv.innerHTML+data+"<br/>";
+            }
+
+            myprint("<u>JS : Exploring - Date Object -1</u>");
+            var cd = new Date(); //Current Date
+            myprint(cd);
+            var yy = cd.getFullYear();
+            var mm = cd.getMonth()+1;
+            var dd = cd.getDate();
+            var day = cd.getDay();
+            myprint(dd+"/"+mm+"/"+yy+"/"+":"+day);
+
+            var hh = cd.getHours();
+            var mi = cd.getMinutes();
+            var ss = cd.getSeconds();
+            var ms = cd.getMilliseconds();
+            myprint(hh+"-"+mi+"-"+ss+"-"+ms);
+            myprint("getTime(): "+cd.getTime()); //Timestamp
+
+            var dueDate = new Date();
+            myprint(dueDate);
+            dueDate.setDate(5);
+            dueDate.setMonth(1);
+            dueDate.setFullYear(2023);
+            dueDate.setHours(4);
+            dueDate.setMinutes(30);
+            dueDate.setSeconds(30);
+            dueDate.setMilliseconds(500);
+            myprint(dueDate);
+
+
+            var dd = new Date(2023,1,5,4,30,30,500);
+            myprint(dd);
+
+            myprint("---------------------");
+
+
+            myprint("Done");
+        </script>
+    </body>
+</html>
