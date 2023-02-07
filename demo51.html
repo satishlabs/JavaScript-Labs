@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>JS : Exploring - String Object - 1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - String Object - 1</u>");
+        var str = "Hello Guys";
+        myprint(str.length);
+        myprint(str.charAt(0));
+        myprint(str.charAt(1));
+        myprint(str.charCodeAt(0));
+        myprint(str.charCodeAt(1));
+        myprint(str.codePointAt(0));
+        myprint(str.codePointAt(1));
+
+        myprint("---------------------------");
+
+        var str = "Satish";
+        myprint(str.indexOf("S"));
+        myprint(str.indexOf("s"));
+        myprint(str.indexOf("t"));
+        myprint(str.indexOf("i"));
+
+        myprint(str.lastIndexOf("S"));
+        myprint(str.lastIndexOf("s"));
+        myprint(str.lastIndexOf("t"));
+        myprint(str.lastIndexOf("i"));
+        myprint("---------------------------");
+
+        myprint(str.startsWith("Sa"));
+        myprint(str.startsWith("ti"));
+        myprint(str.startsWith("sh"));
+        myprint("---------------------------");
+
+        var str = "Hello Guys";
+        myprint(str);
+        myprint(str.toLocaleLowerCase());
+        myprint(str.toLocaleUpperCase());
+        myprint(str.toLowerCase());
+        myprint(str.toUpperCase());
+        myprint("---------------------------");
+
+        var str1 = "Hello";
+        var str2 = str1.concat("Guys");
+        myprint(str1);
+        myprint(str2);
+        myprint("---------------------------");
+
+        var str3 = str1.repeat(3);
+        myprint(str3);
+        myprint("---------------------------");
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
