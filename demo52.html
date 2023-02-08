@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>JS : Exploring - String Object - 2</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - String Object - 2</u>");
+        
+        var str = "Hello Guys How are you Guys Now"; 
+        var strArray = str.split(" ");
+        myprint(strArray);
+        myprint(strArray.length);
+        myprint("---------------------------");
+
+        var strArray = str.split("Guys");
+        myprint(strArray);
+        myprint(strArray.length);
+        myprint("---------------------------");
+
+        var resultString = str.replace("Guys","Students");
+        myprint(str);
+        myprint(resultString);
+        var resultString = str.replaceAll("Guys","Students");
+        myprint(str);
+        myprint(resultString);
+        var resultString = str.replace("H","X");
+        myprint(str);
+        myprint(resultString);
+        var resultString = str.replaceAll("H","X");
+        myprint(str);
+        myprint(resultString);
+        myprint("---------------------------");
+
+        var str = "Hello Guys-CourseCube"; 
+        myprint(str);
+        var resStr = str.substring(6);
+        myprint(resStr);
+        var resStr = str.substring(6,9);
+        myprint(resStr);
+        var resStr = str.substring(6,10);
+        myprint(resStr);
+        myprint("---------------------------");
+
+        var str = "Hello Guys-CourseCube";
+        myprint(str);
+        var resStr = str.substr(6);
+        myprint(resStr);
+        var resStr = str.substr(6, 9);
+        myprint(resStr);
+        var resStr = str.substr(6, 10);
+        myprint(resStr);
+        myprint("---------------------------");
+
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
