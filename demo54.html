@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>JS : Exploring - Array Object - 1</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - Array Object - 1</u>");
+        
+        var arr = [10,59,20,35,30,25,40,50];
+        myprint(arr);
+        myprint(arr.length);
+
+        var first = arr[0];
+        var last = arr[arr.length-1];
+        myprint(first);
+        myprint(last);
+        myprint("---------------------------");
+
+        myprint(arr);
+        var x = arr.push("Hello");
+        myprint(arr);
+        myprint(x);
+
+        var y = arr.push("99","Hai Guys");
+        myprint(arr);
+        myprint("y= "+y);
+
+        var x = arr.pop();
+        myprint(x);
+        myprint(arr);
+
+        var x = arr.pop();
+        myprint(x);
+        myprint(arr);
+        myprint("---------------------------");
+
+
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
