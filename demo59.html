@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JS : Exploring - Array Object - 6</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - Array Object - 6</u>");
+        
+        var arr=["Angular","NodeJS","ReactJS","ExpressJS"];
+        myprint(arr);
+
+        for(var index in arr){
+            myprint(index+" "+arr[index]);
+        }
+        myprint("---------------------------");
+
+        function showArray1(item,index){
+            myprint(index+" "+item);
+        }
+        arr.forEach(showArray1);
+        myprint("---------------------------");
+        function showArray2(item,index){
+           if(index%2==0){
+            myprint(index+" "+item);
+           }
+        }
+        arr.forEach(showArray2);
+
+        myprint("---------------------------");
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
