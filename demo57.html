@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>JS : Exploring - Array Object - 4</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - Array Object - 4</u>");
+        
+        var myarray=[10,20,30,20,30,40,50];
+        var myindex = myarray.indexOf(20);
+        myprint(myindex);
+
+        var myindex = myarray.indexOf(30);
+        myprint(myindex);
+
+        var myindex = myarray.lastIndexOf(20);
+        myprint(myindex);
+
+        var myindex = myarray.lastIndexOf(30);
+        myprint(myindex);
+
+        var myindex = myarray.indexOf(50);
+        myprint(myindex);
+
+        var myindex = myarray.lastIndexOf(50);
+        myprint(myindex);
+
+        var myindex = myarray.indexOf(60);
+        myprint(myindex);
+
+        var myindex = myarray.lastIndexOf(60);
+        myprint(myindex);
+        myprint("---------------------------");
+
+        var myarray=[10,20,30,40,50,60,70]
+        var arrX = myarray.slice();
+        myprint(arrX);
+
+        var arrX = myarray.slice(1,3);
+        myprint(arrX);
+
+        var arrX = myarray.slice(1,5);
+        myprint(arrX);
+
+
+        myprint("---------------------------");
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
