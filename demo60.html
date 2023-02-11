@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>JS : Exploring - Array Object - 7</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - Array Object - 7</u>");
+        
+        var numArray = [1,2,3,4,5];
+        myprint(numArray);
+
+        var sameArray = numArray.map(x=>x);
+        myprint(sameArray);
+
+        var squareArray = numArray.map(x=>x*x);
+        myprint(squareArray);
+
+        var cubeArray = numArray.map(x=>x*x*x);
+        myprint(cubeArray);
+        myprint("---------------------------");
+
+        function get(x){
+            return x;
+        }
+
+        function square(x){
+            return x*x;
+        }
+
+        function cube(x){
+            return x*x*x;
+        }
+
+        var numArray = [1,2,3,4,5];
+        myprint(numArray);
+
+        var sameArray = numArray.map(get);
+        myprint(sameArray);
+
+        var squareArray = numArray.map(square);
+        myprint(squareArray);
+
+        var cubeArray = numArray.map(cube);
+        myprint(cubeArray);
+
+        myprint("---------------------------");
+        myprint("Done!!");
+
+    </script>
+   </body>
+</html>
