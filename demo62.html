@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>JS : Exploring - Array Object - 9</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Exploring - Array Object - 9</u>");
+        
+       var numArray = [1,2,3,4,5];
+       myprint(numArray);
+
+       function sumNumbers(x,y){
+        return x+y;
+       }
+
+       function mulNumbers(x,y){
+        return x*y;
+       }
+
+       var result = numArray.reduce(sumNumbers);
+       myprint(result);
+
+       result = numArray.reduce(mulNumbers);
+       myprint(result);
+       myprint("---------------------------");
+       
+       result = numArray.reduce((x,y)=>x+y);
+       myprint(result);
+
+       result = numArray.reduce((x,y)=>x*y);
+       myprint(result);
+       myprint("---------------------------");
+       
+       result = numArray.reduce((x,y)=>x+y,10);
+       myprint(result);
+
+       result = numArray.reduce((x,y)=>x+y,1);
+       myprint(result);
+       myprint("---------------------------");
+
+       result = numArray.reduce((x,y)=>(x>y)?x:y,1);
+       myprint(result);
+
+       result = numArray.reduce((x,y)=>(x<y)?x:y,1);
+       myprint(result);
+
+
+       myprint("---------------------------");
+       myprint("Done!!");
+
+    </script>
+   </body>
+</html>
