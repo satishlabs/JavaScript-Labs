@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JS : Navigator and Histroy Object</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>Navigator Object :</u>");
+        
+      myprint("Browser: "+navigator.appName);
+      myprint("Browser: "+navigator.appCodeName);
+      myprint("Browser version: "+navigator.appVersion);
+
+      myprint("Platform : "+navigator.platform);
+      myprint("Cookies Enabled: "+navigator.cookieEnabled);
+      myprint("Java Enabled: "+navigator.javaEnabled);
+
+
+      myprint("languages : "+navigator.languages);
+      myprint("User Agent : "+navigator.userAgent);
+      myprint("Vendor : "+navigator.vendor);
+
+      myprint("History Length : "+history.length);
+      // history.back(); 
+    // history.forward(); 
+    // history.go(-1); 
+    // history.go(1); 
+
+       myprint("---------------------------");
+       myprint("Done!!");
+
+    </script>
+   </body>
+</html>
