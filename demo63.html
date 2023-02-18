@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>JS : Window Object</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+
+            li{
+                list-style-type: none;
+                padding: 10px;
+            }
+
+            input{
+                font-size: 20px;
+                color: red;
+                border: 2px red solid;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <form name="myform">
+        <ol>
+            <li><input type="button" value="Display Alert Message" onclick="openAlert()"/></li>
+            <li><input type="button" value="Display Confirmation" onclick="openConfirm()"/></li>
+            <li><input type="button" value="Display Promt" onclick="openPromt()"/></li>
+            <li><input type="button" value="Open New Window" onclick="openNewWin()"/></li>
+            <li><input type="button" value="Close New Window" onclick="closeNewWin()"/></li>
+            <li><input type="button" value="Print this Page" onclick="printPage()"/></li>
+            
+        </ol>
+    </form>
+    <script>
+      function display(data){
+        var mydiv = document.getElementById("my-data-div");
+        mydiv.innerHTML = data;
+      }
+
+      function openAlert(){
+        window.alert("Hello Guys");
+        var x = alert("Welcome to SatishLabs");
+        display(x);
+      }
+
+      function openConfirm(){
+        var result = confirm("Do you want to Delete the Student Record?");
+        if(result){
+            display("Yes, I want to Delete");
+        }else{
+            display("No, I don't want to Delete");
+        }
+      }
+
+      function openPromt(){
+        var name = window.prompt("Enter Student Name","Satish Prasad");
+        display(name);
+      }
+       
+      function openNewWin(){
+        newWin = window.open("Hello.html","newWin",300,300);
+      }
+
+      function closeNewWin(){
+        newWin.close();
+      }
+
+      function printPage(){
+        self.print();
+      }
+
+    </script>
+   </body>
+</html>
