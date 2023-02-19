@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>JS : Screen Object</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Screen Object</u>");
+        
+        myprint("Total Width : "+window.screen.width);
+        myprint("Total Height : "+window.screen.height);
+        myprint("Available Width : "+window.screen.availWidth);
+        myprint("Available Height : "+window.screen.availHeight);
+        myprint("colorDepth : "+window.screen.colorDepth);
+        myprint("pixelDepth : "+window.screen.pixelDepth);
+        myprint("History length : "+history.length);
+        console.log("History length : "+history.length);
+
+       myprint("---------------------------");
+       myprint("Done!!");
+
+    </script>
+   </body>
+</html>
