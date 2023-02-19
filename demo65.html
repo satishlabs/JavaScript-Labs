@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>JS : Location Object</title>
+        <style>
+            input,h1,div{
+                font-size: 25px;
+                border: 2px solid red;
+                background-color: goldenrod;
+                padding-left: 15px;
+                border-radius: 15px;
+                width: 500px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+   <body>
+    <div id="my-data-div"></div>
+    <script>
+        function myprint(data){
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML+data+"</br>";
+        }
+        myprint("<u>JS : Location Object :</u>");
+        
+        myprint("Location : "+window.location);
+        myprint("href : "+window.location.href);
+        myprint("host : "+window.location.host);
+        myprint("hostname : "+window.location.hostname);
+        myprint("pathname : "+window.location.pathname);
+        myprint("port : "+window.location.port);
+        myprint("protocol : "+window.location.protocol);
+        myprint("History length : "+history.length);
+
+       myprint("---------------------------");
+       myprint("Done!!");
+
+    </script>
+   </body>
+</html>
